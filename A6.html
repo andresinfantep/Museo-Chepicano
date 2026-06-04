@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Museo Pueblito Chepicano - A6</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #d4af37;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Encabezado */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, var(--primary), #0f172a);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-style: italic;
+            padding: 0 15px;
+            margin-top: 5px;
+        }
+
+        /* Código Técnico Flotante */
+        .tech-badge {
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+
+        /* Tarjetas de Contenido */
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 6px;
+        }
+
+        /* Lista de Datos Curiosos Estilizados */
+        .fun-fact-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .fun-fact-item strong {
+            color: var(--primary);
+            display: block;
+        }
+
+        .fun-fact-item span {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Tabla de Especificaciones limpia */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .spec-box {
+            background: #f1f5f9;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .spec-box label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            display: block;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .spec-box value {
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 700;
+            display: block;
+        }
+
+        /* Botón de Navegación */
+        .nav-footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .nav-footer p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .nav-footer strong {
+            color: var(--accent);
+            display: block;
+            margin-top: 4px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Encabezado Principal -->
+    <div class="header">
+        <h1>Ford Mustang</h1>
+        <p>"La reinvención de un mito americano para sobrevivir a una era de crisis"</p>
+        <span class="tech-badge">Vehículo A6</span>
+    </div>
+
+    <!-- Bloque de Historia Breve -->
+    <div class="card">
+        <div class="card-title">⏱️ La Historia en 1 Minuto</div>
+        <p style="font-size: 0.95rem; color: var(--text);">
+            A principios de los años 70, la crisis mundial del petróleo golpeó con fuerza a los gigantescos deportivos americanos. El combustible escaseaba y Ford tuvo que tomar una decisión radical: achicar y rediseñar por completo su auto más salvaje. Así nació en 1974 la segunda generación, el Mustang II. Este ejemplar color rojo y negro representa esa era de cambio. Dejó de lado los motores enormes y pesados para convertirse en un deportivo compacto, más ligero, lujoso y eficiente, logrando salvar el nombre "Mustang" de la extinción en un mercado que cambiaba por completo.
+        </p>
+    </div>
+
+    <!-- Bloque de Datos Curiosos (Evita muros de texto) -->
+    <div class="card">
+        <div class="card-title">💡 ¿Sabías qué?</div>
+        
+        <div class="fun-fact-item">
+            <strong>El regreso a las dimensiones originales</strong>
+            <span>El diseño del Mustang II de 1974 redujo el tamaño del auto casi al mismo largo que tenía el modelo original de 1964, buscando recuperar la agilidad urbana perdida con los años.</span>
+        </div>
+
+        <div class="fun-fact-item">
+            <strong>Un éxito incomprendido</strong>
+            <span>Aunque los fanáticos más tradicionales extrañaban la potencia bruta de los modelos sesenteros, el público general amó este rediseño eficiente: Ford vendió más de 385.000 unidades solo en su primer año en vitrinas.</span>
+        </div>
+    </div>
+
+    <!-- Bloque Técnico Tipo Cuadrícula (Sincronizado fielmente con tu catálogo) -->
+    <div class="card">
+        <div class="card-title">📊 Ficha Técnica</div>
+        <div class="spec-grid">
+            <div class="spec-box">
+                <label>Año</label>
+                <value>1974</value>
+            </div>
+            <div class="spec-box">
+                <label>Color</label>
+                <value>Rojo / Negro</value>
+            </div>
+            <div class="spec-box">
+                <label>Sala</label>
+                <value>2° Piso</value>
+            </div>
+            <div class="spec-box">
+                <label>Sector</label>
+                <value>1° Galpón</value>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guía de Navegación del Museo -->
+    <div class="nav-footer">
+        <p>¿Qué ver a continuación?</p>
+        <strong>Avanza por el segundo piso para conocer al Volkswagen 1600 (A7)</strong>
+    </div>
+
+</div>
+
+</body>
+</html>
