@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha Museo Pueblito Chepicano - A1</title>
+    <title>Museo Pueblito Chepicano - Portal Digital</title>
     <style>
         :root {
             --primary: #1e293b;
+            --primary-dark: #0f172a;
             --accent: #d4af37;
             --bg: #f8fafc;
             --card-bg: #ffffff;
@@ -33,132 +34,189 @@
             margin: 0 auto;
         }
 
-        /* Encabezado */
-        .header {
+        /* Encabezado Principal */
+        .hero {
             text-align: center;
-            padding: 20px 0;
-            background: linear-gradient(135deg, var(--primary), #0f172a);
+            padding: 30px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            border-radius: 16px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
-        .header h1 {
-            font-size: 1.6rem;
+        .hero h1 {
+            font-size: 1.8rem;
             color: var(--accent);
             text-transform: uppercase;
             letter-spacing: 1px;
+            margin-bottom: 8px;
         }
 
-        .header p {
-            font-size: 0.9rem;
+        .hero p {
+            font-size: 0.95rem;
             opacity: 0.9;
             font-style: italic;
-            padding: 0 15px;
-            margin-top: 5px;
         }
 
-        /* Código Técnico Flotante */
-        .tech-badge {
-            background-color: var(--accent);
-            color: var(--primary);
-            font-weight: bold;
-            padding: 4px 12px;
-            border-radius: 20px;
+        .tagline {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--accent);
+            padding: 6px 12px;
+            border-radius: 30px;
             display: inline-block;
-            margin-top: 10px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            margin-top: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
-        /* Tarjetas de Contenido */
-        .card {
+        /* Sección de Instrucción */
+        .welcome-box {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        .welcome-box h2 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .welcome-box p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Menú de Categorías (Botones Grandes/Tarjetas) */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .menu-card {
             background: var(--card-bg);
-            border-radius: 14px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
             border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        .menu-card:active {
+            transform: scale(0.98);
+            background: #f8fafc;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
         }
 
         .card-title {
-            font-size: 1.1rem;
-            color: var(--primary);
+            font-size: 1.15rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            background: #f1f5f9;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 6px;
+            justify-content: center;
+            border-radius: 12px;
         }
 
-        /* Lista de Datos Curiosos Estilizados */
-        .fun-fact-item {
-            margin-bottom: 12px;
-            padding-left: 15px;
-            border-left: 3px solid var(--accent);
+        /* Tarjeta de Información del Museo */
+        .info-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 25px;
         }
 
-        .fun-fact-item strong {
-            color: var(--primary);
-            display: block;
-        }
-
-        .fun-fact-item span {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-
-        /* Tabla de Especificaciones limpia */
-        .spec-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .spec-box {
-            background: #f1f5f9;
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .spec-box label {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            display: block;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .spec-box value {
-            font-size: 0.95rem;
-            color: var(--primary);
+        .info-title {
+            font-size: 1rem;
             font-weight: 700;
-            display: block;
+            color: var(--primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 4px;
         }
 
-        /* Botón de Navegación */
-        .nav-footer {
-            background: var(--primary);
-            color: white;
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .info-value {
+            color: var(--primary);
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* Redes Sociales Oficiales */
+        .social-box {
             text-align: center;
             padding: 15px;
-            border-radius: 12px;
-            margin-top: 25px;
         }
 
-        .nav-footer p {
+        .social-box p {
             font-size: 0.85rem;
-            color: #94a3b8;
+            color: var(--text-light);
+            margin-bottom: 10px;
         }
 
-        .nav-footer strong {
-            color: var(--accent);
-            display: block;
-            margin-top: 4px;
-            font-size: 0.95rem;
+        .social-btn {
+            display: inline-block;
+            background: #1877f2; /* Color Facebook */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(24, 119, 242, 0.2);
+        }
+
+        /* Footer Técnico */
+        .footer {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 20px;
+            padding: 10px 0;
         }
     </style>
 </head>
@@ -166,63 +224,94 @@
 
 <div class="container">
 
-    <!-- Encabezado Principal -->
-    <div class="header">
-        <h1>Ford Modelo A</h1>
-        <p>"El auto que tuvo la misión imposible de superar una leyenda"</p>
-        <span class="tech-badge">Vehículo A1</span>
+    <!-- Encabezado / Identidad de Marca -->
+    <div class="hero">
+        <h1>Pueblito Chepicano</h1>
+        <p>Museo de Autos, Motos y Maquinarias Antiguas</p>
+        <span class="tagline">Guía Digital de Exhibición</span>
     </div>
 
-    <!-- Bloque de Historia Breve -->
-    <div class="card">
-        <div class="card-title">⏱️ La Historia en 1 Minuto</div>
-        <p style="font-size: 0.95rem; color: var(--text);">
-            Imagina que tu primer auto (el Ford T) vendió 15 millones de unidades. ¿Cómo creas algo mejor? Henry Ford cerró sus fábricas bajo secreto absoluto y en diciembre de 1927 nació este caballero. Elegante y moderno, causó tal furor que millones de personas hicieron filas interminables solo para conocerlo. ¡Era el equivalente a la salida del último smartphone, pero sobre ruedas!
-        </p>
+    <!-- Mensaje de Bienvenida -->
+    <div class="welcome-box">
+        <h2>¡Bienvenidos al Recorrido!</h2>
+        <p>Selecciona la sección del galpón que estás visitando para conocer la historia interactiva de cada pieza.</p>
     </div>
 
-    <!-- Bloque de Datos Curiosos (Evita muros de texto) -->
-    <div class="card">
-        <div class="card-title">💡 ¿Sabías qué?</div>
+    <!-- Menú Principal Dinámico (Redirecciona a tus otras páginas) -->
+    <div class="menu-grid">
         
-        <div class="fun-fact-item">
-            <strong>¿Parabrisas a prueba de todo?</strong>
-            <span>Fue el primer auto de la historia en incorporar de fábrica un parabrisas de vidrio laminado de seguridad para evitar astillas ante impactos.</span>
-        </div>
+        <!-- Tarjeta Autos -->
+        <!-- Nota: Puedes cambiar 'autos/auto_A1.html' por una lista general de autos si la creas luego -->
+        <a href="autos/auto_A1.html" class="menu-card">
+            <div class="card-info">
+                <span class="card-title">Catálogo de Autos</span>
+                <span class="card-desc">Más de 140 clásicos en exhibición</span>
+            </div>
+            <div class="card-icon">🚗</div>
+        </a>
 
-        <div class="fun-fact-item">
-            <strong>Controles modernos</strong>
-            <span>Introdujo la disposición que usas hoy en tu auto: embrague, freno y acelerador al piso, reemplazando las complejas palancas del modelo anterior.</span>
+        <!-- Tarjeta Motos -->
+        <a href="#" class="menu-card" onclick="alert('Próximamente: Catálogo de Motos en digitalización.'); return false;">
+            <div class="card-info">
+                <span class="card-title">Catálogo de Motos</span>
+                <span class="card-desc">Joyas clásicas de dos ruedas</span>
+            </div>
+            <div class="card-icon">🏍️</div>
+        </a>
+
+        <!-- Tarjeta Camiones -->
+        <a href="#" class="menu-card" onclick="alert('Próximamente: Catálogo de Camiones e Históricos de Bomberos.'); return false;">
+            <div class="card-info">
+                <span class="card-title">Camiones y Bomberos</span>
+                <span class="card-desc">Grandes motores de la historia</span>
+            </div>
+            <div class="card-icon">🚒</div>
+        </a>
+
+        <!-- Tarjeta Tractores -->
+        <a href="#" class="menu-card" onclick="alert('Próximamente: Maquinaria Agrícola y Tractores.'); return false;">
+            <div class="card-info">
+                <span class="card-title">Tractores y Otros</span>
+                <span class="card-desc">El desarrollo agrícola de Chile</span>
+            </div>
+            <div class="card-icon">🚜</div>
+        </a>
+
+    </div>
+
+    <!-- Datos Útiles de Operación Física del Museo -->
+    <div class="info-card">
+        <div class="info-title">📌 Información al Visitante</div>
+        <div class="info-row">
+            <span class="info-label">Días de Atención:</span>
+            <span class="info-value">Viernes a Domingo</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Horario:</span>
+            <span class="info-value">10:00 a 18:00 hrs.</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Dirección:</span>
+            <span class="info-value">18 de Septiembre 150, Chépica</span>
+        </div>
+        <div class="info-row">
+            <span class="info-label">Infraestructura:</span>
+            <span class="info-value">Accesibilidad Universal ♿</span>
         </div>
     </div>
 
-    <!-- Bloque Técnico Tipo Cuadrícula -->
-    <div class="card">
-        <div class="card-title">📊 Ficha Técnica</div>
-        <div class="spec-grid">
-            <div class="spec-box">
-                <label>Año</label>
-                <value>1927</value>
-            </div>
-            <div class="spec-box">
-                <label>Color</label>
-                <value>Beige</value>
-            </div>
-            <div class="spec-box">
-                <label>Sala</label>
-                <value>Recepción</value>
-            </div>
-            <div class="spec-box">
-                <label>Sector</label>
-                <value>1° Galpón</value>
-            </div>
-        </div>
+    <!-- Conexión a Redes Sociales para Promoción (Parte del plan de Marketing) -->
+    <div class="social-box">
+        <p>¿Te gusta nuestro contenido orgánico?</p>
+        <a href="https://www.facebook.com/profile.php?id=61557107198701" target="_blank" class="social-btn">
+            Siguenos en Facebook 👍
+        </a>
     </div>
 
-    <!-- Guía de Navegación del Museo -->
-    <div class="nav-footer">
-        <p>¿Qué ver a continuación?</p>
-        <strong>Escanea el Renault Caravelle (A2) que está a tu lado</strong>
+    <!-- Footer de Créditos del Proyecto -->
+    <div class="footer">
+        <p>© 2026 Museo Pueblito Chepicano.</p>
+        <p>Infraestructura TI desarrollada por Escuela de Ingeniería PUC.</p>
     </div>
 
 </div>
