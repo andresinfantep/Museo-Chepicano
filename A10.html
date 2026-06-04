@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Museo Pueblito Chepicano - A10</title>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #d4af37;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Encabezado */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, var(--primary), #0f172a);
+            color: white;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 1.6rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-style: italic;
+            padding: 0 15px;
+            margin-top: 5px;
+        }
+
+        /* Código Técnico Flotante */
+        .tech-badge {
+            background-color: var(--accent);
+            color: var(--primary);
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+
+        /* Tarjetas de Contenido */
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 6px;
+        }
+
+        /* Lista de Datos Curiosos Estilizados */
+        .fun-fact-item {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .fun-fact-item strong {
+            color: var(--primary);
+            display: block;
+        }
+
+        .fun-fact-item span {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Tabla de Especificaciones limpia */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .spec-box {
+            background: #f1f5f9;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .spec-box label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            display: block;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .spec-box value {
+            font-size: 0.95rem;
+            color: var(--primary);
+            font-weight: 700;
+            display: block;
+        }
+
+        /* Botón de Navegación */
+        .nav-footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .nav-footer p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .nav-footer strong {
+            color: var(--accent);
+            display: block;
+            margin-top: 4px;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Encabezado Principal -->
+    <div class="header">
+        <h1>Chevrolet Chevy Vega</h1>
+        <p>"La ambiciosa respuesta tecnológica de Detroit para conquistar el mercado subcompacto"</p>
+        <span class="tech-badge">Vehículo A10</span>
+    </div>
+
+    <!-- Bloque de Historia Breve -->
+    <div class="card">
+        <div class="card-title">⏱️ La Historia en 1 Minuto</div>
+        <p style="font-size: 0.95rem; color: var(--text);">
+            A comienzos de la década de 1970, las marcas norteamericanas enfrentaban una fuerte invasión de autos compactos eficientes provenientes de Europa y Japón. General Motors decidió contraatacar con todo su poder de ingeniería y creó el Chevrolet Vega, lanzado con un gran despliegue publicitario. Este modelo de 1974, luciendo su llamativo color amarillo en las vitrinas del segundo piso, destaca por sus líneas deportivas inspiradas sutilmente en el Camaro de la época, encarnando una de las apuestas de desarrollo técnico más atrevidas y comentadas en la historia automotriz de Detroit.
+        </p>
+    </div>
+
+    <!-- Bloque de Datos Curiosos (Evita muros de texto) -->
+    <div class="card">
+        <div class="card-title">💡 ¿Sabías qué?</div>
+        
+        <div class="fun-fact-item">
+            <strong>Innovación en el motor</strong>
+            <span>El Vega rompió esquemas al utilizar un motor de cuatro cilindros con un bloque construido completamente de una aleación ligera de aluminio y silicio de alta tecnología, prescindiendo de los tradicionales y pesados cilindros de hierro fundido.</span>
+        </div>
+
+        <div class="fun-fact-item">
+            <strong>¡Viajaban parados en el tren!</strong>
+            <span>Para abaratar los costos de transporte desde las fábricas, Chevrolet diseñó junto a los ferrocarriles un vagón especial llamado "Vert-A-Pac". Los Vega se cargaban de manera vertical, colgados por la nariz, permitiendo meter 30 autos por vagón en lugar de los 15 tradicionales. ¡Venían sellados de fábrica listos para resistir el viaje parados!</span>
+        </div>
+    </div>
+
+    <!-- Bloque Técnico Tipo Cuadrícula (Sincronizado fielmente con tu catálogo) -->
+    <div class="card">
+        <div class="card-title">📊 Ficha Técnica</div>
+        <div class="spec-grid">
+            <div class="spec-box">
+                <label>Año</label>
+                <value>1974</value>
+            </div>
+            <div class="spec-box">
+                <label>Color</label>
+                <value>Amarillo</value>
+            </div>
+            <div class="spec-box">
+                <label>Sala</label>
+                <value>2° Piso</value>
+            </div>
+            <div class="spec-box">
+                <label>Sector</label>
+                <value>1° Galpón</value>
+            </div>
+        </div>
+    </div>
+
+    <!-- Guía de Navegación del Museo -->
+    <div class="nav-footer">
+        <p>¿Qué ver a continuación?</p>
+        <strong>Baja al Pasillo Oeste del 1° Galpón y descubre al elegante Vauxhall 10-4 (A11)</strong>
+    </div>
+
+</div>
+
+</body>
+</html>
